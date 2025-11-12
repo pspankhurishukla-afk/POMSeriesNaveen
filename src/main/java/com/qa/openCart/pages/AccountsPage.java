@@ -24,6 +24,7 @@ public class AccountsPage {
 	}
 	
 	
+	
 	private By logoutLink = By.linkText("Logout");
 	private By headers =By.cssSelector("div#content h2");
 	private By search=By.name("search");
@@ -60,6 +61,7 @@ public class AccountsPage {
 	
 	public List<String> getAccPageHeaders()
 	{
+		System.out.println("Testing");
 		List<WebElement> headersList =driver.findElements(headers);
 		List<String> headerValueList =new ArrayList<String>();
 		for(WebElement e :headersList)
@@ -68,6 +70,7 @@ public class AccountsPage {
 		headerValueList.add(text);
 		}
 		return headerValueList;
+		
 	}
 	
 	public SearchResultsPage doSearchKey(String searchKey)
